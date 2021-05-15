@@ -1,0 +1,426 @@
+{% extends 'student_pages/student_base.html' %}
+<!DOCTYPE HTML>
+{% load static %}
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}">
+<script src='{% static 'https://kit.fontawesome.com/a076d05399.js'%}'></script>
+<link rel="stylesheet" href="{% static 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'%}" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.csss" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'%}" rel="stylesheet">
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400'%}" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'animate.css'%}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'icomoon.css'%}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'magnific-popup.css'%}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'owl.theme.default.min.css'%}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'flexslider.css'%}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{% static 'pricing.css'%}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'style.css'%}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'modernizr-2.6.2.min.js'%}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'respond.min.js'%}"></script>
+	<![endif]-->
+
+	</head>
+<body>
+
+{% block content %}
+    {% if msg is not None %}
+    <script>
+    window.alert("{{ msg }}");
+    </script>
+    {% endif %}
+    <div class="fh5co-loader"></div>
+
+	<div id="page">
+<!--Start header-->
+      <!-- end Header -->
+    <!--slider Start -->
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul style="list-style-type:none;margin-left:-45px;">
+		   	<li style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRocu5mjWmwC0ctUakTuXm5tePq4cEkiPJI0mDWZ_XEd1QZ_27lsfL2DZF4RzSBG6P_KIk&usqp=CAU);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+<center> {% if photo is not None %}
+    <img src="{{ photo.photo }}" style="height:200px;width:200px;padding-top: 15px;" >
+{% else %}
+<img src="{{ pic }}" style="height:200px;width:200px;padding-top: 15px;" >
+
+{% endif %}
+
+			   				<div class="slider-text-inner"><br><br>
+                                <h1 style="color:white;">"Welcome <strong>{{ name }}</strong> to Alpine Institute Of Technology ."</h1>
+									</div></center>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	</ul>
+	  	</div>
+    </aside>
+    <!--slider end-->
+    <!-- start Course -->
+
+	<div id="fh5co-course-categories">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Course categories</h2>
+
+					<p>We are Providing The Best Courses In our Institute under The RGPV University .</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-book-reader"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Bachelor of Engineering</a></h3>
+							<p>The Bachelor of Engineering is an academic degree achieved for undergraduate studies in one of the Engineering Sciences. It takes 3-4 years to graduate a B.Eng. degree.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-heart"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Bachelor of Pharmacy</a></h3>
+							<p>Bachelor of Pharmacy ( B. Pharma) is a four-year undergraduate program in which students study the methods and process of preparing drugs .</p>
+						</div>
+					</div>
+                </div>
+
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-image"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Bachelor of Technology</a></h3>
+							<p>A Bachelor of Technology is an undergraduate academic degree conferred after the completion of a three-year, a four-year or a five-year program .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-industry"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Industrial Training Institute</a></h3>
+							<p>ITIs or Industrial Training Institutes are usually organisations or training centres that provide courses to students seeking easy employment just after completing school.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-graduation-cap"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Diploma</a></h3>
+							<p>A diploma is a certificate or deed issued by an educational institution, such as college or university, that testifies that the recipient has successfully completed a particular course of study.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-thumbs-up"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Master Of Administration</a></h3>
+							<p>The Master of Business Administration degree originated in the United States in the early 20th century when the country industrialized and companies sought.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-cogs"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Master Of Technology</a></h3>
+							<p>
+                                M.Tech is a professional postgraduate engineering master degree programme awarded to candidates after completion of two years of study in the discipline of engineering.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-laptop-code"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Master of Engineering</a></h3>
+							<p>The Master of Engineering degree is generally a professional degree offered as a coursework-based alternative to the traditional research-based Master of Science .</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+<!-- end Course -->
+<!-- compliment Start static-->
+<div id="fh5co-counter" class="fh5co-counters" style="background-image: url({% static 'img_bg_4.jpg'%});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 text-center animate-box">
+                        <span class="icon"><i class="fas fa-laptop-code"></i></span>
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="144" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Our Lab's</span>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center animate-box">
+                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="5543" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Students Enrolled</span>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center animate-box">
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="1002" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Our Classes</span>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center animate-box">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="169" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Certified Teachers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Compliment-->
+	<!-- Start Events -->
+	<div id="fh5co-blog">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Events</h2>
+					<p>We provide and organized many events in the collage that can change the behaviour ,nature ,personality....of the students.And the events are such a loveable and enjoyfull.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="#" class="blog-img-holder" style="background-image: url(https://www.alpineujjain.com/campusfiles/1860_photoname.jpg);"></a>
+						<div class="blog-text">
+							<h3><a href="#">Fressher Party</a></h3>
+							<span class="posted_on">College</span>
+
+							<p>Some wise and insightful welcome quotes for freshers party can be reassuring guideposts for them to dispel all the confusion and steer them in the right direction. We have collected some of the coolest welcome quotes for freshers party to motivate them into making the best out of their time as a fresher!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="#" class="blog-img-holder" style="background-image: url(https://www.alpineujjain.com/campusfiles/1877_photoname.jpeg);"></a>
+						<div class="blog-text">
+							<h3><a href="#">Seminar</a></h3>
+							<span class="posted_on">College</span>
+
+							<p>Tippie Seminar Series brings together the brightest minds in business research to present their discoveries and insights to the larger academic community. Each year, we invite esteemed scholars, faculty, and researchers from across the globe to participate in a speaker series that focuses on individual academic departments .</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="#" class="blog-img-holder" style="background-image: url(https://www.alpineujjain.com/campusfiles/1806_photoname.jpg);"></a>
+                        <div class="blog-text">
+							<h3><a href="#">Workshop</a></h3>
+							<span class="posted_on">College</span>
+
+							<p> Design Thinking has become an extremely popular approach to problem-solving—not only among designers, but across all areas of business.<br> A Design Thinking workshop will spark innovation, foster a user-centric mindset, and get cross-functional teams working together towards a common goal.
+
+
+
+</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- end events-->
+<!-- start write Something About College-->
+	<div id="fh5co-register" style="background-image: url({% static 'img_bg_2.jpg'%});">
+		<div class="overlay"></div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 animate-box">
+				<div class="date-counter text-center">
+					<h2>Know Something About College</h2>
+
+					<div class="simply-countdown simply-countdown-one"></div>
+					<p><strong>Visit ! Hurry Up!</strong></p>
+					<p><a href="https://www.alpineujjain.com/" class="btn btn-primary btn-lg btn-reg">Visit Now!</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+    <br>
+<!-- end write Something About College -->
+    <!-- start compliment by student static -->
+	<div id="fh5co-testimonial" style="background-image: url({% static 'school.jpg'%});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2><span>Honor</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<div class="user" style="background-image: url({% static 'media/person1.jpg'%});"></div>
+									<span>Anivesh Nishad <br><small>Students</small></span>
+									<blockquote>
+										<p>&ldquo;Our core goal is to make people smile, happy, less stressed, and make the campus a little better of a place,” said Anivesh Nishad, Student of the Collage.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<div class="user" style="background-image: url({% static 'media/person1.jpg'%});"></div>
+									<span>Parag Modi <br><small>Students</small></span>
+									<blockquote>
+										<p>&ldquo;It’s fun to see people’s reactions,” I said. “You might think it wouldn’t be that special, but people feel so genuinely excited and really thankful.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<div class="user" style="background-image: url({% static 'media/person1.jpg'%});"></div>
+									<span>Saharsh Solanki<br><small>Student</small></span>
+									<blockquote>
+										<p>&ldquo;We are doing something that should be second nature.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- end compliment by student-->
+
+<!-- Start college Gallery-->
+	<div id="fh5co-gallery" class="fh5co-bg-section">
+		<div class="row text-center">
+			<h2><span> Gallery</span></h2>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url(https://www.alpineujjain.com/campusfiles/1867_photoname.jpg);"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url(https://www.alpineujjain.com/campusfiles/1877_photoname.jpeg);"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url(https://www.alpineujjain.com/campusfiles/1866_photoname.jpg);"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url(https://www.alpineujjain.com/campusfiles/1861_photoname.jpg);"></a>
+			</div>
+		</div>
+	</div>
+<br>
+
+
+
+
+	<!-- jQuery -->
+	<script src="{% static 'jquery.min.js'%}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'jquery.easing.1.3.js'%}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'bootstrap.min.js'%}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'jquery.waypoints.min.js'%}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'jquery.stellar.min.js'%}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'owl.carousel.min.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'jquery.flexslider-min.js'%}"></script>
+	<!-- countTo -->
+	<script src="{% static 'jquery.countTo.js'%}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static 'magnific-popup-options.js'%}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'simplyCountdown.js'%}"></script>
+	<!-- Main -->
+	<script src="{% static 'main.js'%}"></script>
+
+
+{% endblock %}

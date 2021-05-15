@@ -1,0 +1,39 @@
+{% extends 'student_pages/student_base.html' %}
+{% block content %}
+<table border="1" style="width:100%">
+    <thead>
+    <tr>
+        <td>
+            Transaction ID
+        </td>
+                <td>
+            Transaction Date & Time
+        </td>
+                <td>
+Amount        </td>
+                <td>
+      Order ID  </td>
+        <td>
+         Status
+        </td>
+
+
+    </tr>
+    </thead>
+    <tbody>
+        {% for data in data %}
+
+    <tr>
+        <td>{{ data.txnid }}</td>
+                    <td>{{ data.txndate }}</td>
+        <td>{{ data.amount }}</td>
+        <td>{{ data.order_id }}</td>
+        <td>{{ data.status }}</td>
+
+
+    </tr>
+        {% endfor %}
+
+    </tbody>
+</table><br>
+{% endblock %}

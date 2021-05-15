@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{response}}<br><br><br>
+{{response.RESPMSG}}
+
+{% ifequal response.RESPCODE '01' %}
+    <h1>ORDER SUCCESSFULLY<br>
+    Your Txn ID : {{response.TXNID}}<br>
+    DATE of txn : {{response.TXNDATE}}<br>
+    ORDERID : {{response.ORDERID}}
+</h1>
+{% else %}
+<h1>TRANSECTION STATUS : FAILED</h1>
+{% endifequal %}
+</body>
+</html>

@@ -1,0 +1,237 @@
+{% extends 'student_pages/student_base.html' %}
+<!DOCTYPE HTML>
+{% load static %}
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}'" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'%}" rel="stylesheet">
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400'%}" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'animate.css'%}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'icomoon.css'%}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'magnific-popup.css'%}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'owl.theme.default.min.css'%}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'flexslider.css'%}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{% static 'pricing.css'%}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'style.css'%}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'modernizr-2.6.2.min.js'%}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'respond.min.js'%}"></script>
+	<![endif]-->
+	</head>
+<body>
+
+{% block content %}
+{% if msg is not None %}
+    <script>
+    window.alert("{{ msg }}");
+    </script>
+    {% endif %}
+	<div class="fh5co-loader"></div>
+
+	<div id="page">        <!--Start student header-->
+        <!-- end student Header -->
+
+	<!-- start Heading section -->
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul style="list-style-type:none;margin-left:-45px;">
+		   	<li style="background-image: url('https://www.alpineujjain.com/campusfiles/1800_photoname.jpg');">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+<a href="#contact-form">			   					<h1 class="heading-section">My Registration</h1>
+</a>			<h2>See your registration and edit and upadate if you want.</h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+        <br><br>
+<!-- end Heading section-->
+        {%  if data is None %}
+       {{ msg }}
+
+        {% else %}
+
+        <!-- start form-->
+        <div class="container"><div class=" text-center mt-5 ">
+            <h1 style="color:green;"><i class="fas fa-edit"></i> Your Semester Registration Form</h1><hr >
+        </div><br><br>
+        <div class="row ">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form id="contact-form" role="form" style="font-size: large;" action="{% url 'Update_registration_form' id=data.id %}" method="POST" enctype="multipart/form-data">
+                               {% csrf_token %}
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Name *</label> <input id="form_name" type="text" name="name" class="form-control" value="{{ data.name }}" required="required" data-error="Firstname is required." readonly> </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Number *</label> <input id="form_name" type="text" name="contact_number" class="form-control" value="{{ data.contact_number }}" required="required" data-error="Firstname is required." readonly> </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Enrollment Number *</label> <input id="form_name" type="text" name="enrollment_number" class="form-control" value="{{ enrollment_number }}" required="required" data-error="Firstname is required." disabled> </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Father's Name *</label> <input id="form_name" type="text" name="father_name" class="form-control" value="{{ data.father_name }}" required="required" data-error="Firstname is required." pattern="[a-zA-Z][a-zA-Z\s]*" title="Must contain at least one upercase letter, one lowercase letter and a Space "> </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" type="email" name="email" class="form-control" value="{{ data.email }}" required="required" data-error="Valid email is required." readonly> </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Semester</label> <input id="form_need" name="semester" class="form-control" value="{{ data.semester }}" required="required" data-error="Please specify your need." readonly>
+                                                     </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Course</label> <input id="form_need" name="course" class="form-control" required="required" value="{{ data.course }}" data-error="Please specify your need." readonly>
+                                                    </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Address *</label> <input id="form_message" name="address" class="form-control" value="{{ data.address }}" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></input> </div>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Photo *</label> <img src="{{ data.photo }}" style="width:150px;height:50px;border-radius:30px;"/> <input type="file" name="photo"  style="width:115px;" required>
+                                                     </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Signature *</label> <img src="{{ data.signature }}" style="width:150px;height:50px;border-radius:30px;"/><input type="file" name="signature" style="width:115px;" required>
+                                                  <br><br>  </div>
+                                        </div>
+
+                                        </div>
+               <button type="submit" class="btn btn-success " style="border-radius: 10px;" >Save Your Registration</button>
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div> <!-- /.row-->
+        </div>
+
+    </div>
+    <!--end form-->
+
+    {%  endif %}
+    </div>
+<br><br><br><br><br>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+
+
+	<!-- jQuery -->
+	<script src="{% static 'jquery.min.js'%}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'jquery.easing.1.3.js'%}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'bootstrap.min.js'%}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'jquery.waypoints.min.js'%}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'jquery.stellar.min.js'%}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'owl.carousel.min.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'jquery.flexslider-min.js'%}"></script>
+	<!-- countTo -->
+	<script src="{% static 'jquery.countTo.js'%}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static 'magnific-popup-options.js'%}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'simplyCountdown.js'%}"></script>
+	<!-- Main -->
+	<script src="{% static 'main.js'%}"></script>
+
+
+{% endblock %}
+</div>
+	</body>
+</html>

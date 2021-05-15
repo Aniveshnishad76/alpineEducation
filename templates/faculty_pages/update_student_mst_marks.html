@@ -1,0 +1,255 @@
+{% extends 'faculty_pages/faculty_base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+<style type="text/css">
+   body{
+    background-color: #dee9ff;
+}
+
+.registration-form{
+   padding: 50px 0;
+}
+
+.registration-form form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon{
+   text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item{
+   border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
+</style>
+</head>
+<body>
+{% block content %}
+{% if msg is not None %}
+    <script>
+    window.alert('{{msg}}');
+    </script>
+    {% endif %}
+     <div class="fh5co-loader"></div>
+
+	<div id="page">
+ <aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul style="list-style-type:none;margin-left:-45px;">
+		   	<li style="background-image: url({% static 'img_bg_4.jpg'%});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+<a href="#contact-form">			   					<h1 class="heading-section">Search Students</h1>
+</a>			<h2>Register yourself for every semester for to know Evrything quickly and faster.</h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside><br>
+
+    <div class="registration-form" style="margin:70px;">
+        <form action="{% url 'do_update_mst_marks' id=data.id %}" method="post">
+            {% csrf_token %}
+            <center>
+                <span class="h3" style="color:#5A8EF6">Add MST Marks</span>
+            </center>
+<br>            <div class="form-group">
+                <input type="text" class="form-control item" id="username" value="{{ data.enrollment_number }}" name="enrollment_number" placeholder="Enrollment Number" required>
+            </div>
+            <div class="form-group">
+
+                <select class="form-control item pt-2" required id="username" name="mst" value="{{ data.mst }}">
+                  <option  disabled>MST</option>
+         <option  value="1">MST 1</option>
+         <option value="2">MST 2</option>
+         <option  value="3">MST 3</option>
+         <option  value="4">MST 4</option>
+         <option  value="5">MST 5</option>
+         <option  value="6">MST 6</option>
+         <option  value="7">MST 7</option>
+         <option  value="8">MST 8</option>
+         <option  value="9">MST 9</option>
+         <option  value="10">MST 10</option>
+         <option  value="11">MST 11</option>
+         <option  value="12">MST 12</option>
+         <option  value="13">MST 13</option>
+         <option  value="14">MST 14</option>
+         <option  value="15">MST 15</option>
+         <option  value="16">MST 16</option>
+
+
+                </select>
+            </div>
+            <div class="form-group">
+                                <select class="form-control item pt-2" id="username" name="month" value="{{ data.month }}" required>
+                                          <option disabled>Month</option>
+         <option  value="january">January</option>
+         <option value="feburary">Feburary</option>
+         <option  value="march">March</option>
+         <option  value="april">April</option>
+         <option  value="may">May</option>
+         <option  value="june">June</option>
+         <option  value="july">July </option>
+         <option  value="august">August</option>
+         <option  value="september">September</option>
+         <option  value="october">October</option>
+         <option  value="november">November</option>
+         <option  value="december">December</option>
+
+
+
+                </select>
+                            </div>
+
+                                        <div class="form-group">
+                                <select class="form-control item pt-2" id="username" name="semester" value="{{ data.semester }}" required>
+                                          <option  disabled>Semester</option>
+
+         <option  value="1">Semester 1</option>
+         <option value="2">Semester 2</option>
+         <option  value="3">Semester 3</option>
+         <option  value="4">Semester 4</option>
+         <option  value="5">Semester 5</option>
+         <option  value="6">Semester 6</option>
+         <option  value="7">Semester 7</option>
+         <option  value="8">Semester 8</option>
+
+
+
+                </select>
+                            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control item" id="phone-number" name="subject" placeholder="Subject" value="{{ data.subject }}" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="birth-date" name="marks_obtained" placeholder="Marks Obtained" value="{{ data.marks_obtained }}" required>
+            </div>
+                        <div class="form-group">
+                <input type="text" class="form-control item" id="birth-date" name="total_marks" placeholder="Total Marks" value="{{ data.total_marks }}" required>
+            </div>
+            <div class="form-group">
+              <center> <button type="Submit" class="btn btn-primary " style="border-radius: 10px;width:180px;">Update </button></center>
+            </div>
+        </form>
+    </div>
+<!-- jQuery -->
+	<script src="{% static 'jquery.min.js'%}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'jquery.easing.1.3.js'%}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'bootstrap.min.js'%}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'jquery.waypoints.min.js'%}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'jquery.stellar.min.js'%}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'owl.carousel.min.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'jquery.flexslider-min.js'%}"></script>
+	<!-- countTo -->
+	<script src="{% static 'jquery.countTo.js'%}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static 'magnific-popup-options.js'%}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'simplyCountdown.js'%}"></script>
+	<!-- Main -->
+	<script src="{% static 'main.js'%}"></script>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,280 @@
+{% extends 'student_pages/student_base.html' %}
+<!DOCTYPE HTML>
+{% load static %}
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}'" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'%}" rel="stylesheet">
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400'%}" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'animate.css'%}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'icomoon.css'%}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'magnific-popup.css'%}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'owl.theme.default.min.css'%}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'flexslider.css'%}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{% static 'pricing.css'%}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'style.css'%}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'modernizr-2.6.2.min.js'%}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'respond.min.js'%}"></script>
+	<![endif]-->
+	</head>
+<body>
+
+{% block content %}
+    {% if msg is not None %}
+    <script>
+    window.alert("{{ msg }}");
+    </script>
+    {% endif %}
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">        <!--Start student header-->
+        <!-- end student Header -->
+
+	<!-- start Heading section -->
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			<ul style="list-style-type:none;margin-left:-45px;">
+		   	<li style="background-image: url('https://www.alpineujjain.com/images/slid-4.jpg');">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+<a href="#contact-form">			   					<h1 class="heading-section">Register Here</h1>
+</a>			<h2>Register yourself for every semester for to know Evrything quickly and faster.</h2>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+        <br><br>
+<!-- end Heading section-->
+        <!-- start form-->
+        <div class="container"><div class=" text-center mt-5 ">
+            <h1 style="color:green;"><i class="fas fa-edit"></i> Semester Registration Form</h1><hr >
+        </div><br><br>
+        <div class="row ">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form id="contact-form" role="form" style="font-size: large;" action="Student_registration_form" method="post" enctype="multipart/form-data">
+                               {% csrf_token %}
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Name *</label> <input id="form_name" type="text" name="name" class="form-control" value="{{ data.name }}" required="required" data-error="Firstname is required." readonly> </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Number *</label> <input id="form_name" type="text" name="contact_number" class="form-control" value="{{ data.contact_number }}" required="required" data-error="Firstname is required." readonly> </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Enrollment Number *</label> <input id="form_name" type="text" name="enrollment_number" class="form-control" value="{{ enrollment_number }}" required="required" data-error="Firstname is required." disabled> </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_name">Father's Name *</label> <input id="form_name" type="text" name="father_name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required." pattern="[a-zA-Z][a-zA-Z\s]*" title="Must contain at least one upercase letter, one lowercase letter and a Space "> </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" type="email" name="email" class="form-control" value="{{ data.email }}" required="required" data-error="Valid email is required." readonly> </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Semester</label> <select id="form_need" name="semester" class="form-control" required="required" data-error="Please specify your need." >
+                                                    <option value="" selected disabled>--Select Your Semester--</option>
+                                                    <option value="1">1st</option>
+                                                    <option value="2">2nd</option>
+                                                    <option value="3">3rd</option>
+                                                    <option value="4">4th</option>
+                                                    <option value="5">5th</option>
+                                                    <option value="6">6th</option>
+                                                    <option value="7">7th</option>
+                                                    <option value="8">8th</option>
+                                                </select> </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="form_need">Course</label> <select id="form_need" name="course" class="form-control" required="required" data-error="Please specify your need.">
+                                                    <option value="" selected disabled>--Select Your Courses--</option>
+                                                    <option value="Mechanical_Engineering_(BE)">Mechanical Engineering (BE) </option>
+                                                    <option value="Civil_Engineering_(BE)">Civil Engineering (BE)</option>
+                                                    <option value="Computer_Science_Engineering_(BE)">Computer Science Engineering (BE)</option>
+                                                    <option value="Electrical_Engineering_(BE)">Electrical Engineering (BE)</option>
+                                                    <option value="Electronics_&_Comunication_Engineering_(BE)">Electronics & Comunication Engineering (BE)</option>
+                                                <option value="Mechanical_Engineering_(B Tech)">Mechanical Engineering (B Tech) </option>
+                                                    <option value="Civil_Engineering_(B Tech)">Civil Engineering (B Tech)</option>
+                                                    <option value="Computer_Science_Engineering_(B Tech)">Computer Science Engineering (B Tech)</option>
+                                                    <option value="Electrical_Engineering_(B Tech)">Electrical Engineering (B Tech)</option>
+                                                    <option value="Electronics_&_Comunication_Engineering_(B Tech)">Electronics & Comunication Engineering (B Tech)</option>
+                                                    <option value="Mechanical_Engineering_(M Tech)">Mechanical Engineering (M Tech) </option>
+                                                    <option value="Civil_Engineering_(M Tech)">Civil Engineering (M Tech)</option>
+                                                    <option value="Computer_Science_Engineering_(M Tech)">Computer Science Engineering (M Tech)</option>
+                                                    <option value="Electrical_Engineering_(M Tech)">Electrical Engineering (M Tech)</option>
+                                                    <option value="Electronics_&_Comunication_Engineering_(M Tech)">Electronics & Comunication Engineering (M Tech)</option>
+                                                <option value="Human_Resources_Mangement_(MBA)">Human Resources Mangement (MBA)</option>
+                                                 <option value="Financial_Management_(MBA)">Financial Management (MBA)</option>
+                                                <option value="Systems_Management_(MBA)">Systems Management (MBA)</option>
+                                                <option value="Mechanical_Engineering_(Diploma)">  Mechanical Engineering(Diploma)</option>
+                                                    <option value="Electrical_Engineering_(Diploma)">Electrical Engineering(Diploma)</option>
+                                                    <option value="Electronics_and_Communication (Diploma)"> Electronics and Communication (Diploma) </option>
+                                                    <option value="Civil_Engineering_(Diploma)">Civil Engineering (Diploma)</option>
+                                                    <option value="Computer_Science_and_Engineering_(Diploma)">Computer Science and Engineering (Diploma)</option>
+                                                <option value="IT_Engineering_(Diploma)"> IT Engineering (Diploma)</option>
+                                                 <option value=">Chemical_Engineering_(Diploma)">Chemical Engineering (Diploma)</option>
+                                                 <option value="Mechanical_Engineering_(ITI)"> Mechanical Engineering (ITI)  </option>
+                                                    <option value="Tool_&_Die_Maker_Engineering_(ITI) ">Tool & Die Maker Engineering(ITI) </option>
+                                                    <option value="Pump_Operator_(ITI)">Pump Operator (ITI) </option>
+                                                    <option value="Civil_Engineering_(ITI)"> Civil Engineering (ITI ) </option>
+                                                    <option value="Fitter_Engineering_(ITI)">Fitter Engineering(ITI)</option>
+                                                 <option value="Computer_Engineering_(ITI)">Computer Engineering(ITI)</option>
+                                                <option value="Turner_Engineering_(ITI)">Turner Engineering(ITI)</option>
+                                                 <option value="Bechelor_in_Pharmacy">Bechelor in Pharmacy</option>
+                                                <option value="Master_in_Pharmacy">Master in Pharmacy</option>
+
+
+                                                </select> </div>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Address *</label> <textarea id="form_message" name="address" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                        </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_name">Photo *</label> <input id="form_name" type="file" name="photo" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."> </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_name">Sign *</label> <input id="form_name" type="file" name="signature" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."> </div>
+                                            </div>
+                                            
+                                        </div>
+                                     <br>
+                                        <div class="col-md-12"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Registration"> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div> <!-- /.row-->
+        </div>
+        
+    </div>
+    <!--end form-->
+    </div>
+<br><br><br><br><br>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+
+
+	<!-- jQuery -->
+	<script src="{% static 'jquery.min.js'%}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'jquery.easing.1.3.js'%}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'bootstrap.min.js'%}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'jquery.waypoints.min.js'%}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'jquery.stellar.min.js'%}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'owl.carousel.min.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'jquery.flexslider-min.js'%}"></script>
+	<!-- countTo -->
+	<script src="{% static 'jquery.countTo.js'%}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static 'magnific-popup-options.js'%}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'simplyCountdown.js'%}"></script>
+	<!-- Main -->
+	<script src="{% static 'main.js'%}"></script>
+
+
+{% endblock %}
+</div>
+	</body>
+</html>
+

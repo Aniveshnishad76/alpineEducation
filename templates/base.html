@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+
+{% load static %}
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Education</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}">
+<script src='{% static 'https://kit.fontawesome.com/a076d05399.js'%}'></script>
+<link rel="stylesheet" href="{% static 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'%}" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}'" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'%}" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'%}" rel="stylesheet">
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400'%}" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'animate.css'%}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'icomoon.css'%}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'magnific-popup.css'%}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'owl.theme.default.min.css'%}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{% static 'flexslider.css'%}">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="{% static 'pricing.css'%}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'style.css'%}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'modernizr-2.6.2.min.js'%}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'respond.min.js'%}"></script>
+	<![endif]-->
+        </head>
+	<body>
+
+
+	 <nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="site">Alpine Institute Of Technology</p>
+						<p class="num">Call: 0734-787878</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fas fa-globe"></i></a></li>
+							<li><a href="#"><i class="fab fa-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+                        <div id="fh5co-logo"><a href="Home_page"><img src="https://www.alpineujjain.com/images/logo.png" style="border-radius:50px;height:50px;"></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="Home_page"><i class="fas fa-home"></i> Home</a></li>
+							<li><a href="Courses_page"><i class="fas fa-book"></i> Courses</a></li>
+							<li><a href="Faculty_page"><i class="fas fa-user"></i> Faculty</a></li>
+							<li><a href="About_page"><i class="fas fa-university"></i> About</a></li>
+							<li><a href="Contact_page"><i class="fas fa-phone"></i> Contact</a></li>
+							<li class="btn-cta"><a href="Student_login"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="Student_register"><span>Register</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+     {% include 'student_pages/messages.html' %}
+   {%  block content%}
+
+    {% endblock %}
+
+
+<footer id="fh5co-footer" role="contentinfo" style="background-image: url({% static 'school.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-3 fh5co-widget">
+					<h3>About Education</h3>
+					<p>As the world is proceeding towards advancement, it is necessary to update the system with modern ideologies and proactive skills. Any academic institute is the pillar of nation’s building which perform three basic tasks of preservation, dissemination and advancement of knowledge in various spheres of human activities. </p>
+				</div>
+                <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget ">
+					<h3>Our Services</h3>
+					<ul class="fh5co-footer-links">
+<li><a href="About_page">About Us</a></li>
+                        <li><a href="Contact_page">Contact Us</a></li>
+						<li><a href="#">Terms&Privacy</a></li>
+                        <li><a href="#">Help Desk</a></li>
+
+
+					</ul>
+				</div>
+               <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
+					<h3>Important Links</h3>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">News & Events</a></li>
+                        <li><a href="#">anti Ragging</a></li>
+						</ul>
+				</div>
+
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
+					<h3>Email</h3>
+					<ul class="fh5co-footer-links">
+						<li><a href="#"> info@alpineujjain.com</a></li>
+						</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
+					<h3>Phone</h3>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">0734-2700550</a></li>
+						<li><a href="#"> 0734-2503417</a></li>
+						</ul>
+				</div>
+
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2008 . All Rights Reserved.</small>
+                        <small class="block">Designed by Website Designer's</small>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+<!-- end footer-->
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="fas fa-arrow-up"></i></a>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- jQuery -->
+	<script src="{% static 'jquery.min.js'%}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'jquery.easing.1.3.js'%}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'bootstrap.min.js'%}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'jquery.waypoints.min.js'%}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'jquery.stellar.min.js'%}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'owl.carousel.min.js'%}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'jquery.flexslider-min.js'%}"></script>
+	<!-- countTo -->
+	<script src="{% static 'jquery.countTo.js'%}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static 'magnific-popup-options.js'%}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'simplyCountdown.js'%}"></script>
+	<!-- Main -->
+	<script src="{% static 'main.js'%}"></script>
+
+
+   <script>
+    var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+	</script>
+
+	</body>
+</html>
+

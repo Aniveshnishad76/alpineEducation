@@ -145,7 +145,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'assets')
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
-EMAIL_HOST_USER="janivesh.nishad07"
+EMAIL_HOST_USER="anivesh.nishad07@gmail.com"
 EMAIL_HOST_PASSWORD="Nishad@1234"
 EMAIL_USE_SSL=False
 
